@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Jura, Josefin Slab;
+    background-color: #f8f9fa; /* Fundo claro para contraste */
+    color: #333;
+}
+
+/* navbar */
+.navbar {
+    position: relative;
+    z-index: 10; /* Para garantir que a navbar fique acima de outros elementos */
+}
+
+/* hero imagem */
+.hero-header {
+    position: relative;
+    height: 100vh; /* Altura total da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    z-index: 1; /* Para garantir que o conteúdo fique acima da imagem de fundo */
+}
+
+.hero-header .container {
+    position: relative;
+    z-index: 2; /* Para garantir que o conteúdo fique acima do fundo */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a área do contêiner */
+    z-index: 0; /* Para garantir que a imagem fique atrás do conteúdo */
+}
