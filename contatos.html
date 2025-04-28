@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatos - Living Around</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Jura:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-contatos">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo-cinza.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="acomodacoes.html">Acomodação</a></li>
+        <li class="nav-item"><a class="nav-link" href="locais.html">Locais</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seção Contato -->
+<section class="contato-section d-flex justify-content-start align-items-center">
+  <div class="contato-form p-4">
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label text-white">Nome:</label>
+        <input type="text" class="form-control input-form" id="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label text-white">Email:</label>
+        <input type="email" class="form-control input-form" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensagem" class="form-label text-white">Mensagem:</label>
+        <textarea class="form-control input-form" id="mensagem" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+<!-- para add o SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

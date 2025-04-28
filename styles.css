@@ -7,7 +7,7 @@
 
 body {
     font-family: "Jura", "Josefin Slab", serif;
-    background-color: #f8f9fa;
+    background-color: #ECE6CA;
     color: #333;
 }
 
@@ -28,6 +28,28 @@ body {
     color: black !important;
     font-weight: 700;
     transition: color 0.3s ease;
+}
+
+.nav-link[disabled] {
+    pointer-events: none; /* Desativa cliques */
+    cursor: not-allowed; /* Mostra o cursor de "não permitido" */
+}
+
+.navbar-brand {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.navbar-contatos .nav-link {
+    color: #FFFFFF !important; /* Define a cor do texto como branco */
+}
+
+.navbar-locais .nav-link {
+    color: #FFFFFF !important; /* Define a cor do texto como branco */
+}
+
+.navbar-locais-mapa .nav-link {
+    color: #FFFFFF !important; /* Define a cor do texto como branco */
 }
 
 /* HERO */
@@ -67,6 +89,7 @@ header h1 {
 /* TRABALHOS REMOTOS */
 .retangulo {
     position: relative;
+    width: 100%;
     max-width: 1440px;
     min-height: 569px;
     background-color: #ECE6CA;
@@ -109,22 +132,13 @@ header h1 {
     font-weight: 700;
 }
 
-/* TRABALHOS REMOTOS – LISTAS */
-.trabalhos-remotos {
-    flex: 1;
-    position: relative;
-    font-family: "Jura", sans-serif;
-    color: black;
+/* Listas */
+.row ul {
+    text-align: left;
+    padding-left: 60px;
 }
 
-.titulo {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-/* CANTOS COLADOS À LISTA */
+/* CANTOS DECORATIVOS */
 .bracket-top-left,
 .bracket-bottom-right {
     position: absolute;
@@ -148,6 +162,78 @@ header h1 {
     transform: translate(12px, 12px);
 }
 
+/* Acomodação Section */
+.acomodacao-section {
+    height: 515px;
+    width: 100%;
+    background-color: #eee7c9;
+}
+
+.img-col img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.content-col {
+    background-color: #000;
+    position: relative;
+}
+
+.btn-descobrir {
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content-col .bi-arrow-up-circle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Road Section */
+.road-section {
+    height: 515px;
+    width: 100%;
+    background-color: #eee7c9;
+}
+
+.img-col-road img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.content-col-road {
+    background-color: #eee7c9;
+    position: relative;
+}
+
+.btn-explorar {
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content-col-road .bi-arrow-up-circle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
     .retangulo {
@@ -157,122 +243,462 @@ header h1 {
         text-align: center;
     }
 
+    .retangulo::before {
+        display: none;
+    }
+
     .mensagem {
-        max-width: 350px;
-        padding-top: 20px;
-        text-align: center; /* Centraliza o texto horizontalmente */
-        margin: 0 auto; /* Centraliza o bloco horizontalmente */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centraliza verticalmente */
-        align-items: center; /* Centraliza horizontalmente */
-        height: 100%; /* Garante que o elemento ocupe toda a altura disponível */
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     aside {
-        padding-left: 0;
-        margin-left: 0;
+        padding: 0;
+        margin: 0;
         text-align: center;
     }
-}
 
-aside {
-    padding-left: 60px;
-    margin-left: 60px;
+    .row {
+        justify-content: center;
+    }
+
+    .row ul {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .acomodacao-section,
+    .road-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-col img,
+    .img-col-road img {
+        height: 300px;
+    }
+
+    .content-col,
+    .content-col-road {
+        height: auto;
+        padding: 40px 20px;
+    }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 48px; /* Reduz o tamanho do título */
+        font-size: 48px;
     }
 
     .mensagem p {
-        font-size: 24px; /* Reduz o tamanho do texto */
+        font-size: 24px;
     }
 
     .retangulo {
-        padding: 10px; /* Reduz ainda mais o padding */
+        padding: 10px;
     }
 
     .listas li {
-        font-size: 12px; /* Ajusta o tamanho da fonte */
+        font-size: 12px;
     }
 }
 
-/* listas trabalhos remotos */
-.row ul {
-    text-align: left; /* Alinha o texto das listas à esquerda */
-    padding-left: 60px; /* Adiciona padding à esquerda para as listas */
+/* Blog Section */
+.blog-section {
+    background-image: url('images/blog.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
 }
 
-/* sessão kombi */
-.acomodacao-section {
-    height: 515px;
-    width: 100%;
-    background-color: #eee7c9;
-  }
-  
-  .img-col img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .content-col {
-    background-color: #000;
-    position: relative;
-  }
-  
-  .btn-descobrir {
-    border: 2px solid white;
-    border-radius: 40px;
-    padding: 10px 30px;
+.btn-blog {
+    background-color: #1E1E1E;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .bi-arrow-up-circle {
-    position: absolute; /* Posiciona o ícone */
-    bottom: 20px; /* Ajusta a posição inferior */
-    right: 20px; /* Ajusta a posição à direita */
-    font-size: 40px; /* Define o tamanho do ícone */
-    color: white; /* Define a cor do ícone */
-    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */   
+    width: 309px;
+    height: 77px;
+    top: 2748px;
+    left: 565px;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    font-family: "Jura", "Josefin Slab", serif;
 }
 
-/* sessão road */
-.road-section {
-    height: 515px;
+/* Footer Section */
+.footer-section {
+    background-color: black;
     width: 100%;
-    background-color: #eee7c9;
+    padding: 40px 20px;
 }
-  
-  .road-section .img-col img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .content-col-road {
-    background-color: #eee7c9;
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.social-icons i {
+    color: white;
+    margin: 0 10px;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.footer-text {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+/* Responsivo Blog + Footer */
+@media (max-width: 768px) {
+    .blog-section {
+        height: 300px;
+    }
+
+    .btn-blog {
+        font-size: 18px;
+        padding: 8px 30px;
+    }
+
+    .footer-title {
+        font-size: 20px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}
+
+.blog-content .bi-arrow-up-circle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: black;
+}
+
+
+/* Banner da Página Acomodações */
+.banner-section {
+    background-image: url('images/kombi-trip.png');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    min-height: 100vh; /* Altura mínima de 100% da altura da tela */
     position: relative;
-  }
-  
-  .road-section .btn-explorar {
-    border: 2px solid black;
-    border-radius: 40px;
-    padding: 10px 30px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.banner-title {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    box-shadow: #333 0px 0px 10px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.card-body {
+    background-color: #ECE6CA;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 35px;
+}
+
+.info-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
     color: black;
     text-decoration: none;
-    font-size: 18px;
+}
+
+.info-link[disabled] {
+    pointer-events: none; /* Desativa cliques */
+    cursor: not-allowed; /* Mostra o cursor de "não permitido" */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
+
+
+.modal-content {
+    border-radius: 20px;
+    overflow: hidden;
   }
   
-  .road-section .bi-arrow-up-circle {
-    position: absolute; /* Posiciona o ícone */
-    bottom: 20px; /* Ajusta a posição inferior */
-    left: 20px; /* Ajusta a posição à esquerda */
-    font-size: 40px; /* Define o tamanho do ícone */
-    color: black; /* Define a cor do ícone */
-    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */ 
+  .modal-body {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+  }
+  
+  .modal-body img {
+    border-radius: 20px;
+  }
+  
+  .modal-body h5 {
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .modal-body p, .modal-body ul {
+    font-size: 14px;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  .modal-body ul {
+    padding-left: 20px;
+  }
+
+  #hippieModal .modal-content {
+    background-image: url('images/kombi-trip.png');
+    background-size: cover; /* Faz a imagem cobrir todo o modal */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: #333; /* Ajusta a cor do texto para contraste */
+    border-radius: 20px; /* Mantém as bordas arredondadas */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */ 
 }
+
+/* .modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('images/kombi-trip.png');
+} */
+
+  .btn-alugar {
+    background-color: #686831; /* Cor de fundo do botão */
+    color: black; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: not-allowed; /* Cursor indicando que o botão está desativado */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+    align-items: center; /* Centraliza o texto */
+    justify-content: center; /* Centraliza o conteúdo do botão */
+}
+
+.btn-alugar[disabled] {
+    pointer-events: none; /* Desativa cliques */
+    cursor: not-allowed; /* Mostra o cursor de "não permitido" */
+}
+
+
+/* Página Locais */
+.locais-section {
+    background-image: url('images/bussula.png'); /* Atualize o caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 80px; /* para a navbar não cobrir */
+    position: relative;
+  }
+
+  .locais-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem com uma camada preta */
+    z-index: 1; /* Coloca o overlay abaixo do conteúdo */
+}
+  
+  .locais-box {
+    background-color: #D9D9D9;
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 300px;
+    position: relative;
+    margin-left: 200px;
+    position: relative;
+    z-index: 2; /* Garante que o formulário fique acima do overlay */
+  }
+  
+  .locais-box .form-label {
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .locais-box .form-select {
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .btn-ver {
+    background-color: #88824C;
+    color: black;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+  }
+  
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .locais-box {
+      width: 90%;
+    }
+  }
+
+
+/* pag locais mapas */
+.container-locais {
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .mapa-info {
+    max-width: 350px;
+  }
+  
+  .mapa-box img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .info-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 100%;
+    font-family: 'Jura', sans-serif;
+    font-size: 14px;
+  }
+  
+  .info-box p {
+    margin: 5px 0;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container-locais {
+      flex-direction: column;
+    }
+  
+    .locais-box, .mapa-info {
+      width: 100%;
+      align-items: center;
+      position: relative;
+      z-index: 2; /* Garante que o formulário fique acima do overlay */
+    }
+  
+    .mapa-box img {
+      max-width: 90%;
+      
+    }
+  
+    .info-box {
+      max-width: 90%;
+    }
+  }
+
+  .mapa-box img {
+    position: relative; /* Garante que a imagem esteja acima do overlay */
+    z-index: 3; /* Maior que o overlay */
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+/* Página Contatos */
+.contato-section {
+    background-image: url('images/trailer-sunset.png'); /* ajuste para sua imagem correta */
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 80px;
+  }
+
+  .contato-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74); /* Escurece a imagem com uma camada preta */
+    z-index: 1; /* Coloca o overlay abaixo do conteúdo */
+}
+  
+  .contato-form {
+    background-color: black;
+    border-radius: 25px;
+    width: 350px;
+    margin-left: 200px;
+    z-index: 3; /* Garante que o formulário fique acima do overlay */
+  }
+  
+  .input-form {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+  }
+  
+  .btn-enviar {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .contato-form {
+      width: 90%;
+    }
+  }  

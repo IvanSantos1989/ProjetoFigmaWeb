@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locais - Living Around</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Jura:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-locais">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo-cinza.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="acomodacoes.html">Acomodação</a></li>
+        <li class="nav-item"><a class="nav-link active" disabled href="#">Locais</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seção Locais -->
+<section class="locais-section d-flex justify-content-start align-items-center">
+  <div class="locais-box">
+    <form>
+      <div class="mb-4">
+        <label for="pais" class="form-label">Escolha o país:</label>
+        <select disabled id="pais" class="form-select">
+          <option selected>país</option>
+          
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="cidade" class="form-label">Escolha a cidade:</label>
+        <select disabled id="cidade" class="form-select">
+          <option selected>cidade</option>
+       
+        </select>
+      </div>
+      <button type="button" class="btn-ver" onclick="window.location.href='locais_mapa.html'">Ver</button>
+    </form>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

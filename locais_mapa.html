@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa - Living Around</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Jura:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-locais-mapa">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo-cinza.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="acomodacoes.html">Acomodação</a></li>
+        <li class="nav-item"><a class="nav-link active" disabled href="#">Locais</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seção Locais -->
+<section class="locais-section d-flex justify-content-center align-items-center">
+    <div class="container-locais d-flex flex-column flex-md-row align-items-center justify-content-center gap-5">
+  
+      <!-- Formulário -->
+      <div class="locais-box">
+        <form>
+          <div class="mb-4">
+            <label for="pais" class="form-label">Escolha o país:</label>
+            <select disabled id="pais" class="form-select">
+              <option selected>país</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label for="cidade" class="form-label">Escolha a cidade:</label>
+            <select disabled id="cidade" class="form-select">
+              <option selected>cidade</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-ver">Ver</button>
+        </form>
+      </div>
+  
+      <!-- Mapa + Informações -->
+      <div class="mapa-info d-flex flex-column align-items-center">
+        <div class="mapa-box">
+          <img src="images/mapa.png" alt="Mapa Porto" class="img-fluid rounded">
+        </div>
+  
+        <div class="info-box text-white text-center mt-3 p-3">
+          <p class="fw-bold">LIVING AROUND - Porto</p>
+          <p>Rua da Alegria, 666<br>4000-789 - Porto</p>
+          <p>livingaround_porto@living.com</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
