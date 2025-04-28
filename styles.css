@@ -45,11 +45,11 @@ body {
 }
 
 .navbar-locais .nav-link {
-    color: #FFFFFF !important; /* Define a cor do texto como branco */
+    color: #FFFFFF !important;
 }
 
 .navbar-locais-mapa .nav-link {
-    color: #FFFFFF !important; /* Define a cor do texto como branco */
+    color: #FFFFFF !important;
 }
 
 /* HERO */
@@ -520,7 +520,7 @@ header h1 {
 
 /* Página Locais */
 .locais-section {
-    background-image: url('images/bussula.png'); /* Atualize o caminho da imagem */
+    background-image: url('images/bussula.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
